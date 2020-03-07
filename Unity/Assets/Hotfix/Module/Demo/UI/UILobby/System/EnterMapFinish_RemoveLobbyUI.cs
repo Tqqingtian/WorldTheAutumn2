@@ -10,10 +10,12 @@ namespace ETHotfix
 	{
 		public override void Run()
 		{
+           
+            Log.Info("进入大厅界面");
             //移除UI
-			Game.Scene.GetComponent<UIComponent>().Remove(UIType.UILobby);
+            Game.Scene.GetComponent<UIComponent>().Remove(UIType.UILobby);
             //卸载UI资源
 			ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle(UIType.UILobby.StringToAB());
-		}
+        }
 	}
 }

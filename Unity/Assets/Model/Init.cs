@@ -17,7 +17,7 @@ namespace ETModel
 			{
 				SynchronizationContext.SetSynchronizationContext(OneThreadSynchronizationContext.Instance);
 
-				DontDestroyOnLoad(gameObject);
+				//DontDestroyOnLoad(gameObject);
 				Game.EventSystem.Add(DLLType.Model, typeof(Init).Assembly);
 
 				Game.Scene.AddComponent<TimerComponent>();//计时器

@@ -29,7 +29,9 @@ namespace ETHotfix
 
 		private static int RpcId { get; set; }
 		private readonly Dictionary<int, Action<IResponse>> requestCallback = new Dictionary<int, Action<IResponse>>();
-
+        /// <summary>
+        /// 注销
+        /// </summary>
 		public override void Dispose()
 		{
 			if (this.IsDisposed)

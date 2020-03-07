@@ -26,12 +26,18 @@ namespace ETHotfix
 			enterMap.GetComponent<Button>().onClick.Add(this.EnterMap);
 
 			this.text = rc.Get<GameObject>("Text").GetComponent<Text>();
-		}
+
+            //MapHelper.EnterMapAsync().Coroutine();
+            //Game.EventSystem.Run(EventIdType.EnterMainLobbyFinish);
+        }
 
 		private void EnterMap()
 		{
-			MapHelper.EnterMapAsync().Coroutine();
-		}
+
+            MapHelper.EnterMapAsync().Coroutine();
+
+            Game.EventSystem.Run(EventIdType.EnterMainLobbyFinish);
+        }
 		
 
 	}

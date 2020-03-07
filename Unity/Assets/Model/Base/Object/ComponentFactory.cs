@@ -222,7 +222,13 @@ namespace ETModel
 			Game.EventSystem.Awake(component, a, b, c);
 			return component;
 		}
-
+        /// <summary>
+        /// 创建ID
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="id"></param>
+        /// <param name="fromPool"></param>
+        /// <returns></returns>
 		public static T CreateWithId<T>(long id, bool fromPool = true) where T : ComponentWithId
 		{
 			Type type = typeof (T);

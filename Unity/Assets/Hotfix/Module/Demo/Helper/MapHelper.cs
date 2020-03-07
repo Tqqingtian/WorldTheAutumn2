@@ -5,6 +5,10 @@ namespace ETHotfix
 {
     public static class MapHelper
     {
+        /// <summary>
+        /// 进入地图
+        /// </summary>
+        /// <returns></returns>
         public static async ETVoid EnterMapAsync()
         {
             try
@@ -26,7 +30,7 @@ namespace ETHotfix
                 PlayerComponent.Instance.MyPlayer.UnitId = g2CEnterMap.UnitId;
 				
                 Game.Scene.AddComponent<OperaComponent>();
-				
+
                 Game.EventSystem.Run(EventIdType.EnterMapFinish);
             }
             catch (Exception e)

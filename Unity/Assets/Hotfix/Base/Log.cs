@@ -18,8 +18,12 @@ namespace ETHotfix
 		{
 			ETModel.Log.Info(msg);
 		}
+        public static void TypeInfo(string msg)
+        {
+            ETModel.Log.Info($"[{System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.FullName}]:{msg}");
+        }
 
-		public static void Error(Exception e)
+        public static void Error(Exception e)
 		{
 			ETModel.Log.Error(e.ToStr());
 		}
